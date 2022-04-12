@@ -5,7 +5,7 @@ const LoginScreen = () => {
   const navigate = useNavigate()
 
   const handleLogin = () => {
-    navigate('/marvel', {
+    navigate('/', {
       replace: true
     })
   }
