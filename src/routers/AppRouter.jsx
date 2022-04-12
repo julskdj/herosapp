@@ -1,20 +1,15 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import DcScreen from "../components/DC/DcScreen";
-import MarvelScreen from "../components/Marvel/Marvel";
-import SearchScreen from "../components/Search/SearchScreen";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import LoginScreen from "../components/Login/LoginScreen";
+import DashboardRoutes from "./DashboardRoutes";
 
 const AppRouter = () => {
   return (
-    <div>
-      <h1>Welcome To React Router!</h1>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MarvelScreen/>}/>
-        <Route path="/marvel" element={<DcScreen/>}/>
-        <Route path="/search" element={<SearchScreen/>}/>
-        <Route path="/about" />
+        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/*" element={<DashboardRoutes />} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 };
 
